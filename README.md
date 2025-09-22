@@ -27,12 +27,6 @@ cd api-gateway && npm start
 node client-demo.js
 ```
 
-### Verificação:
-```bash
-curl http://localhost:3000/health
-curl http://localhost:3000/registry
-```
-
 ---
 
 ## DICAS DE IMPLEMENTAÇÃO

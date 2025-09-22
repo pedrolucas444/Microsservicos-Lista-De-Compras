@@ -1,0 +1,17 @@
+{
+  "user-service": {
+    "host": "localhost",
+    "port": 3001,
+    "lastSeen": 1758505864676
+  },
+  "item-service": {
+    "host": "localhost",
+    "port": 3002,
+    "lastSeen": 1758505889635
+  },
+  "list-service": {
+    "host": "localhost",
+    "port": 3003,
+    "lastSeen": 1758505874876
+  }
+}

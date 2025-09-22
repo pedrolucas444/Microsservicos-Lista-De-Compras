@@ -1,0 +1,22 @@
+[
+  {"id":"item-1","name":"Arroz 5kg","category":"Alimentos","brand":"ArrozBom","unit":"kg","averagePrice":20.5,"barcode":"7890000000001","description":"Arroz branco tipo 1","active":true,"createdAt":1690000000000},
+  {"id":"item-2","name":"Feijão Carioca 1kg","category":"Alimentos","brand":"FeijaoBom","unit":"kg","averagePrice":8.5,"barcode":"7890000000002","description":"Feijão carioca selecionado","active":true,"createdAt":1690000000000},
+  {"id":"item-3","name":"Açúcar 1kg","category":"Alimentos","brand":"DoceLar","unit":"kg","averagePrice":4.2,"barcode":"7890000000003","description":"Açúcar refinado","active":true,"createdAt":1690000000000},
+  {"id":"item-4","name":"Sabão em pó 2kg","category":"Limpeza","brand":"Limpo","unit":"un","averagePrice":12.0,"barcode":"7890000000004","description":"Sabão em pó para roupas","active":true,"createdAt":1690000000000},
+  {"id":"item-5","name":"Detergente 500ml","category":"Limpeza","brand":"Limpo","unit":"un","averagePrice":3.75,"barcode":"7890000000005","description":"Detergente líquido","active":true,"createdAt":1690000000000},
+  {"id":"item-6","name":"Pasta de dente 90g","category":"Higiene","brand":"Sorriso","unit":"un","averagePrice":6.0,"barcode":"7890000000006","description":"Pasta dental sabor menta","active":true,"createdAt":1690000000000},
+  {"id":"item-7","name":"Sabonete 90g","category":"Higiene","brand":"Aroma","unit":"un","averagePrice":2.5,"barcode":"7890000000007","description":"Sabonete vegetal","active":true,"createdAt":1690000000000},
+  {"id":"item-8","name":"Refrigerante 2L","category":"Bebidas","brand":"Fresca","unit":"litro","averagePrice":7.5,"barcode":"7890000000008","description":"Refrigerante cola 2L","active":true,"createdAt":1690000000000},
+  {"id":"item-9","name":"Água Mineral 1.5L","category":"Bebidas","brand":"Fonte","unit":"litro","averagePrice":2.9,"barcode":"7890000000009","description":"Água sem gás","active":true,"createdAt":1690000000000},
+  {"id":"item-10","name":"Pão Francês 10un","category":"Padaria","brand":"Padaria do Bairro","unit":"un","averagePrice":9.0,"barcode":"7890000000010","description":"Pacote com 10 pães","active":true,"createdAt":1690000000000},
+  {"id":"item-11","name":"Leite UHT 1L","category":"Bebidas","brand":"LeiteTop","unit":"litro","averagePrice":4.5,"barcode":"7890000000011","description":"Leite integral","active":true,"createdAt":1690000000000},
+  {"id":"item-12","name":"Manteiga 200g","category":"Padaria","brand":"Manteigaria","unit":"un","averagePrice":8.0,"barcode":"7890000000012","description":"Manteiga com sal","active":true,"createdAt":1690000000000},
+  {"id":"item-13","name":"Cereal 300g","category":"Alimentos","brand":"CerealMax","unit":"un","averagePrice":10.0,"barcode":"7890000000013","description":"Cereal matinal","active":true,"createdAt":1690000000000},
+  {"id":"item-14","name":"Álcool 70% 500ml","category":"Limpeza","brand":"Sanit","unit":"un","averagePrice":5.0,"barcode":"7890000000014","description":"Álcool em gel líquido","active":true,"createdAt":1690000000000},
+  {"id":"item-15","name":"Papel Higiênico 4un","category":"Higiene","brand":"Confort","unit":"un","averagePrice":7.0,"barcode":"7890000000015","description":"Rolos de papel higiênico","active":true,"createdAt":1690000000000},
+  {"id":"item-16","name":"Café 500g","category":"Alimentos","brand":"CafeBom","unit":"kg","averagePrice":18.0,"barcode":"7890000000016","description":"Café torrado e moído","active":true,"createdAt":1690000000000},
+  {"id":"item-17","name":"Azeite 500ml","category":"Alimentos","brand":"Oli","unit":"litro","averagePrice":22.0,"barcode":"7890000000017","description":"Azeite extra virgem","active":true,"createdAt":1690000000000},
+  {"id":"item-18","name":"Escova de dente","category":"Higiene","brand":"Sorriso","unit":"un","averagePrice":4.0,"barcode":"7890000000018","description":"Escova macia","active":true,"createdAt":1690000000000},
+  {"id":"item-19","name":"Bolo de fubá 500g","category":"Padaria","brand":"Padaria do Bairro","unit":"un","averagePrice":12.0,"barcode":"7890000000019","description":"Bolo caseiro","active":true,"createdAt":1690000000000},
+  {"id":"item-20","name":"Suco de laranja 1L","category":"Bebidas","brand":"Fruta","unit":"litro","averagePrice":5.5,"barcode":"7890000000020","description":"Suco natural de laranja","active":true,"createdAt":1690000000000}
+]

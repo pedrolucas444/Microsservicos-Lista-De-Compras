@@ -1,0 +1,30 @@
+[
+  {
+    "id": "8709fdbd-5039-4bf7-9060-270bdb792ae6",
+    "email": "direto@teste.com",
+    "username": "direto",
+    "password": "$2b$10$tu185tgbCvShQXwyKNClh.3ETGJPgEe4Njf4QukfrUKAIBgjFe5iG",
+    "firstName": "",
+    "lastName": "",
+    "preferences": {
+      "defaultStore": "",
+      "currency": ""
+    },
+    "createdAt": 1758504093276,
+    "updatedAt": 1758504093276
+  },
+  {
+    "id": "5f88a7c1-77d9-444f-be4a-168ba5dbdfb9",
+    "email": "demo@teste.com",
+    "username": "demo",
+    "password": "$2b$10$f/IX/On/lOZtFr6Lw4K5W.k/EQ2dYzsJNREjorVd/88oRWa37yTWa",
+    "firstName": "",
+    "lastName": "",
+    "preferences": {
+      "defaultStore": "",
+      "currency": ""
+    },
+    "createdAt": 1758504101502,
+    "updatedAt": 1758504101502
+  }
+]

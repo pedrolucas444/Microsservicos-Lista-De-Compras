@@ -9,6 +9,17 @@ const authMiddleware = require("../../shared/authMiddleware");
 const app = express();
 app.use(express.json());
 
+// Middleware para tratar erros de parse de JSON e requisições abortadas
+app.use((err, req, res, next) => {
+  if (!err) return next();
+  // raw-body lança erro com message 'request aborted' quando o cliente fecha a conexão
+  if (err.type === 'entity.parse.failed' || (err.message && err.message.toLowerCase().includes('request aborted'))) {
+    console.warn('[UserService] Requisição abortada ou JSON inválido');
+    return res.status(400).json({ error: 'JSON inválido ou requisição abortada' });
+  }
+  next(err);
+});
+
 const usersDb = new JsonDatabase("users.json");
 const SECRET = "segredo123";
 

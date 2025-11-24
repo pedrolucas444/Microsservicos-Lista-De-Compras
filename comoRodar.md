@@ -138,3 +138,50 @@ npm run start:consumer:notify
 # Consumer de analytics (calcula total gasto)
 npm run start:consumer:analytics
 ```
+
+## 1. Registrar user
+```
+curl -s -X POST http://localhost:3001/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{"email":"a@d.com","username":"aluno","password":"senha"}' | jq .
+```
+
+## 2. Fazer Login
+```
+TOKEN=$(curl -s -X POST http://localhost:3001/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"a@d.com","password":"senha"}' | jq -r .token)
+echo "TOKEN length: ${#TOKEN}"
+```
+
+## 3. Criar lista e salvar LIST_ID
+
+```
+LIST_ID=$(curl -s -X POST http://localhost:3003/lists \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $TOKEN" \
+  -d '{"name":"Minhas Compras","description":"Demo"}' | jq -r .list.id)
+echo "LIST_ID=$LIST_ID"
+```
+
+## 4. Criar item e salvar ITEM_ID
+```
+ITEM_ID=$(curl -s -X POST http://localhost:3002/items \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Banana","price":3.50}' | jq -r .item.id)
+echo "ITEM_ID=$ITEM_ID"
+```
+
+## 5. Adicionar item à lista
+```
+curl -s -X POST "http://localhost:3003/lists/$LIST_ID/items" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $TOKEN" \
+  -d "{\"itemId\":\"$ITEM_ID\",\"quantity\":2}" | jq .
+```
+## 6. Fazer checkout
+```
+curl -i -X POST "http://localhost:3003/lists/$LIST_ID/checkout" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json"
+```

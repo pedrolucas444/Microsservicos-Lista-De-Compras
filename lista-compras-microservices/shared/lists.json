@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "id": "330cd8ca-a091-4f7f-9ae3-cc6afa038808",
+    "userId": "7f374046-a5bf-4998-860b-1053ecfec7a5",
+    "name": "Minhas Compras",
+    "description": "Teste",
+    "status": "active",
+    "items": [],
+    "summary": {
+      "totalItems": 0,
+      "purchasedItems": 0,
+      "estimatedTotal": 0
+    },
+    "createdAt": 1764003015795,
+    "updatedAt": 1764003015795
+  },
+  {
+    "id": "eb42678a-2ce6-47db-96d9-1b195140f01f",
+    "userId": "7f374046-a5bf-4998-860b-1053ecfec7a5",
+    "name": "Minhas Compras",
+    "description": "Teste",
+    "status": "active",
+    "items": [],
+    "summary": {
+      "totalItems": 0,
+      "purchasedItems": 0,
+      "estimatedTotal": 0
+    },
+    "createdAt": 1764004249346,
+    "updatedAt": 1764004249346
+  },
+  {
+    "id": "647722a8-c9c2-4a65-a9fc-e1511bb94d8f",
+    "userId": "7f374046-a5bf-4998-860b-1053ecfec7a5",
+    "name": "Minhas Compras",
+    "description": "Teste",
+    "status": "active",
+    "items": [],
+    "summary": {
+      "totalItems": 0,
+      "purchasedItems": 0,
+      "estimatedTotal": 0
+    },
+    "createdAt": 1764004493022,
+    "updatedAt": 1764004493022
+  },
+  {
+    "id": "315225fc-9b51-4803-a3bf-e37e54a7cb11",
+    "userId": "b80fffdd-1ff1-4a80-82ce-8cb9e1b40c1a",
+    "name": "Minhas Compras",
+    "description": "Demo",
+    "status": "active",
+    "items": [
+      {
+        "itemId": "eacd77cc-2169-4b0b-a688-2d9ac97c7a15",
+        "itemName": "Banana",
+        "quantity": 2,
+        "estimatedPrice": null,
+        "purchased": false,
+        "notes": "",
+        "addedAt": 1764008570783
+      }
+    ],
+    "summary": {
+      "totalItems": 1,
+      "purchasedItems": 0,
+      "estimatedTotal": null
+    },
+    "createdAt": 1764008551941,
+    "updatedAt": 1764008570783
+  }
+]

@@ -8,12 +8,15 @@
     "start:item": "node lista-compras-microservices/services/item-service/index.js",
     "start:list": "node lista-compras-microservices/services/list-service/index.js",
     "start:gateway": "node lista-compras-microservices/api-gateway/index.js",
+    "start:consumer:notify": "node lista-compras-microservices/consumers/notify.js",
+    "start:consumer:analytics": "node lista-compras-microservices/consumers/analytics.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "amqplib": "^0.10.9",
     "axios": "^1.12.2",
     "bcrypt": "^6.0.0",
     "express": "^5.1.0",

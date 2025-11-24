@@ -70,6 +70,20 @@ function proxyRoute(serviceName) {
       logLevel: 'warn',
       timeout: 25000, // 25 segundos
       proxyTimeout: 25000,
+      // Garantir que o corpo (JSON) já parseado pelo express.json() seja repassado
+      onProxyReq: (proxyReq, req, res) => {
+        try {
+          if (req.body && Object.keys(req.body).length) {
+            const bodyData = JSON.stringify(req.body);
+            // Atualiza headers e escreve o body no request upstream
+            proxyReq.setHeader('Content-Type', 'application/json');
+            proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData));
+            proxyReq.write(bodyData);
+          }
+        } catch (err) {
+          console.warn('[Proxy] falha ao repassar body para upstream:', err && err.message ? err.message : err);
+        }
+      },
       onError: (err, req, res) => {
         console.error(`[Proxy Error] ${serviceName}:`, err.message);
         recordFailure(serviceName);

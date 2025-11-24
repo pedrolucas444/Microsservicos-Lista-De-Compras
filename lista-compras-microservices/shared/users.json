@@ -26,5 +26,47 @@
     },
     "createdAt": 1758504101502,
     "updatedAt": 1758504101502
+  },
+  {
+    "id": "7f374046-a5bf-4998-860b-1053ecfec7a5",
+    "email": "a@b.com",
+    "username": "a",
+    "password": "$2b$10$itdlnWUE5YU9UZp28kBovu9vUyRyZnAHUqdiJCiK51u5Ebrbtgvj.",
+    "firstName": "",
+    "lastName": "",
+    "preferences": {
+      "defaultStore": "",
+      "currency": ""
+    },
+    "createdAt": 1764002540149,
+    "updatedAt": 1764002540149
+  },
+  {
+    "id": "53bd47af-4676-4d33-8cc0-a43fdd9e86fb",
+    "email": "a@c.com",
+    "username": "b",
+    "password": "$2b$10$2Vcmh0bNYtuKnUT4Ek2It./8PIAWHJIGWpCj9Co7Z8jIOVfVN7jLq",
+    "firstName": "",
+    "lastName": "",
+    "preferences": {
+      "defaultStore": "",
+      "currency": ""
+    },
+    "createdAt": 1764003989836,
+    "updatedAt": 1764003989836
+  },
+  {
+    "id": "b80fffdd-1ff1-4a80-82ce-8cb9e1b40c1a",
+    "email": "a@d.com",
+    "username": "aluno",
+    "password": "$2b$10$3uyV4qFAI90UqBbPDY0vMOTGPdAEnM8RxULNAcdGFfK6JU/fSFsma",
+    "firstName": "",
+    "lastName": "",
+    "preferences": {
+      "defaultStore": "",
+      "currency": ""
+    },
+    "createdAt": 1764008537827,
+    "updatedAt": 1764008537827
   }
 ]

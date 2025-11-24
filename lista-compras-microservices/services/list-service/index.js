@@ -11,7 +11,12 @@ app.use(express.json());
 
 const listsDb = new JsonDatabase("lists.json");
 
-// 🔹 aplica o middleware em todas as rotas do List Service
+// Health (não protegido) - importante para o API Gateway e health checks
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', service: 'list-service' });
+});
+
+// 🔹 aplica o middleware em todas as rotas do List Service (após /health)
 app.use(authMiddleware);
 
 // Criar nova lista

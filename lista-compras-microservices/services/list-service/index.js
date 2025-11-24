@@ -4,6 +4,7 @@ const JsonDatabase = require("../../shared/JsonDatabase");
 const registry = require("../../shared/serviceRegistry");
 const axios = require("axios");
 const authMiddleware = require("../../shared/authMiddleware");
+const amqplib = require('amqplib');
 
 const app = express();
 app.use(express.json());
@@ -165,6 +166,43 @@ app.get("/lists/:id/summary", (req, res) => {
   const list = lists.find(l => l.id === req.params.id && l.userId === req.userId);
   if (!list) return res.status(404).json({ error: "Lista não encontrada" });
   res.json(list.summary);
+});
+
+// Checkout assíncrono: publica evento e retorna 202
+app.post('/lists/:id/checkout', async (req, res) => {
+  const lists = listsDb.read();
+  const listIndex = lists.findIndex(l => l.id === req.params.id && l.userId === req.userId);
+  if (listIndex === -1) return res.status(404).json({ error: 'Lista não encontrada' });
+
+  const list = lists[listIndex];
+
+  // monta mensagem de evento
+  const event = {
+    event: 'list.checkout.completed',
+    listId: list.id,
+    userId: list.userId,
+    items: list.items,
+    summary: list.summary,
+    timestamp: Date.now()
+  };
+
+  try {
+    const RABBIT = process.env.RABBITMQ_URL || 'amqp://localhost';
+    const conn = await amqplib.connect(RABBIT);
+    const ch = await conn.createChannel();
+    const EX = 'shopping_events';
+    await ch.assertExchange(EX, 'topic', { durable: true });
+    const routingKey = 'list.checkout.completed';
+    ch.publish(EX, routingKey, Buffer.from(JSON.stringify(event)), { persistent: true });
+    await ch.close();
+    await conn.close();
+    console.log(`[Event] published ${routingKey} for list ${list.id}`);
+  } catch (err) {
+    console.error('Erro publicando evento de checkout:', err.message || err);
+  }
+
+  // retorno imediato
+  res.status(202).json({ message: 'Checkout accepted' });
 });
 
 // Porta do serviço

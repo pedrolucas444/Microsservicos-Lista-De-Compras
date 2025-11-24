@@ -10,12 +10,15 @@
     "start:item": "cd services/item-service && npm start", 
     "start:list": "cd services/list-service && npm start",
     "start:gateway": "cd api-gateway && npm start",
+    "start:consumer:notify": "node consumers/notify.js",
+    "start:consumer:analytics": "node consumers/analytics.js",
     "demo": "node ../client-demo.js"
   },
   "keywords": ["microservices", "node", "express", "shopping-list"],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.12.2"
+    "axios": "^1.12.2",
+    "amqplib": "^0.10.3"
   }
 }
